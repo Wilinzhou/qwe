@@ -1,0 +1,30 @@
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>打字机</title>
+ <style>
+body{
+background-color:pink;
+color:white;
+}
+p::after{
+content:"👊"; 
+}
+
+</style>
+  </head>
+  <body>	
+	<p id="p"></p>
+<script>
+     let str = "我叫张耿，我是职教一哥，都给我低调点，见面给我递烟鞠躬打招呼，不服来和我碰一碰。"
+    let i = 0
+     let timer = setInterval(()=>{
+         p.innerText += str[i]
+         i++
+          if(i == str.length-1){
+         clearInterval(timer)
+          }
+        },200)
+     </script>
+  </body>
+</html>
